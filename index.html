@@ -508,27 +508,28 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
   .fg{grid-template-columns:1fr;}
   .ff,.fg3{grid-column:1;}
   .ft-top{grid-template-columns:1fr;gap:1.3rem;}
-  .navbar{padding:0 0.7rem;gap:6px;overflow:hidden;}
+  /* Navbar mobile: kompres tapi tetap fungsional */
+  .navbar{padding:0 0.6rem;gap:4px;overflow:visible;}
   .main{padding:1.2rem 1rem 4rem;}
-  .nav-pub .nav-btn span{display:none;}
-  .nav-pub .nav-btn{padding:6px 8px;}
-  .upload-slots{grid-template-columns:1fr;}
-  /* Sembunyikan teks logo di layar sempit */
+  /* Sembunyikan teks logo - hanya tampil icon BNI */
   .logo-txt{display:none;}
-  /* Kompres tombol Internal */
-  .nav-more-btn{padding:6px 10px;font-size:0.72rem;}
-  .nav-more-btn span{display:none;}
-  /* Badge koneksi lebih kecil di mobile */
+  /* Tombol Lapor & Cek - hanya emoji */
+  .nav-pub .nav-btn span{display:none;}
+  .nav-pub .nav-btn{padding:5px 8px;font-size:0.85rem;}
+  /* Tombol Internal - lebih kecil tapi tetap ada teks */
+  .nav-more-btn{padding:5px 10px;font-size:0.72rem;gap:3px;}
+  /* Sistem Aktif - lebih kecil */
+  .sys-ind{padding:3px 7px;}
+  .sys-txt{font-size:0.52rem;letter-spacing:0.3px;}
+  /* Badge backend - pojok kanan atas */
   .conn-b{padding:3px 8px;font-size:0.55rem;top:94px;right:0.5rem;}
-  /* sys-ind lebih kecil */
-  .sys-ind{padding:4px 8px;}
-  .sys-txt{font-size:0.55rem;}
+  .upload-slots{grid-template-columns:1fr;}
 }
 
 @media(max-width:400px){
-  .logo-box{width:32px;height:32px;}
-  .nav-more-btn{padding:5px 8px;font-size:0.68rem;}
+  .logo-box{width:30px;height:30px;}
   .sys-ind{display:none;}
+  .nav-more-btn{font-size:0.68rem;padding:5px 8px;}
 }
 
 /* ══ PRIORITAS BADGE ══ */
@@ -607,7 +608,7 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 
   <!-- INTERNAL dropdown -->
   <div class="nav-internal">
-    <button class="nav-more-btn" onclick="toggleDrop()">⚙️ <span>Internal</span> ▾</button>
+    <button class="nav-more-btn" onclick="toggleDrop()">⚙️ Internal ▾</button>
     <div class="nav-dropdown" id="nav-drop">
       <div class="dd-label">Menu Internal</div>
       <button class="dd-item" onclick="reqPin('cs')">🎧 Portal CS</button>
